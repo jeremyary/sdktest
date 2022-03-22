@@ -1,0 +1,47 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: sdktest.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Bar is the Schema for the bars API
+      displayName: Bar
+      kind: Bar
+      name: bars.foo.redhat.com
+      version: v1alpha1
+  description: sdktest
+  displayName: sdktest
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - jary
+  links:
+  - name: Sdktest
+    url: https://sdktest.domain
+  maintainers:
+  - email: jary@redhat.com
+    name: jary
+  maturity: alpha
+  provider:
+    name: jary
+  version: 0.0.0
